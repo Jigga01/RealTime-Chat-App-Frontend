@@ -112,17 +112,14 @@ const SignUp = () => {
           setPic(data.url);
           console.log(data.url);
           setLoading(false);
-          {
-            toast({
-              title: "Image uploaded successfully!",
-              status: "success",
-              duration: 5000,
-              isClosable: true,
-              position: "bottom",
-            });
-          }
+          toast({
+            title: "Image uploaded successfully!",
+            status: "success",
+            duration: 5000,
+            isClosable: true,
+            position: "bottom",
+          });
         })
-
         .catch((err) => {
           console.log(err);
           setLoading(false);
@@ -156,7 +153,7 @@ const SignUp = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormControl>
-      //add password field
+      {/* add password field */}
       <FormControl id="password" isRequired>
         <FormLabel>Password</FormLabel>
         <InputGroup>
@@ -172,7 +169,7 @@ const SignUp = () => {
           </InputRightElement>
         </InputGroup>
       </FormControl>
-      //confirm password field
+      {/* //confirm password field */}
       <FormControl id="confirm-password" isRequired>
         <FormLabel>Confirm Password</FormLabel>
         <InputGroup>
